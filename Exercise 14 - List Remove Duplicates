@@ -1,0 +1,12 @@
+# Exercise from www.pythonpractice.org
+#
+# Write a function that takes a list and returns a new list that contains
+# all the elements of the first minus all the duplicates.
+
+a = [1, 1, 2, 2, 3, 4, 5, 5, 6, 6, 9, 9, 10, 11, 12, 15]
+
+def convert(x):
+    return list(set(x))
+
+convert(a)
+print (convert(a))
