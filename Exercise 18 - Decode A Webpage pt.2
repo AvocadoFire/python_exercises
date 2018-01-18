@@ -1,0 +1,11 @@
+# Get text from a webpage - Needs improvement
+
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://www.vanityfair.com/style/society/2014/06/monica-lewinsky-humiliation-culture'
+r = requests.get(url)
+r_html = r.text
+page = BeautifulSoup(requests.get(url).text, "lxml")
+for text in page.find_all("p"):
+    print(text.text.strip())
