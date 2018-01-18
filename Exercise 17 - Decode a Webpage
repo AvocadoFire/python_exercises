@@ -1,0 +1,13 @@
+# Exercise 17 - www.practicepython.org
+# Grabs Headlines from the NY Times. Needs work as headings aren't consistent on the site.
+# i.e. "h2" is not just used for headings. Filtering required.
+
+import requests
+from bs4 import BeautifulSoup
+
+url = 'http://www.nytimes.com'
+r = requests.get(url)
+r_html = r.text
+page = BeautifulSoup(requests.get(url).text, "lxml")
+for headlines in page.find_all("h2"):
+    print(headlines.text.strip())
