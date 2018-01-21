@@ -1,5 +1,6 @@
-# Exercise 26 - Draw a Game Board from www.pythonpractice.org
+# Exercise 26 - Check Tic Tac Toe from www.pythonpractice.org
 
+# Test Cases
 winner_is_2 = [[2, 2, 0],
                [2, 1, 0],
                [2, 1, 1]]
